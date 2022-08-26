@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  min-width: 320px;
+  width: 100%;
+}
+
+div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  min-height: 50px;
+}
+
+div:last-child {
+  margin-right: 0;
+}
+
+section {
+  display: flex;
+}
+
+button[type=button] {
+  font-size: 14px;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:focus-visible,
+button:active {
+  opacity: 0.4;
+}
+
+.wrapper--first div:nth-child(2){
+  border-style: dashed;
+}
+
+.wrapper--second > div:first-child button {
+  background-color: #ADCE74;
+}
+
+.wrapper--second > div:last-child button {
+  background-color: #61B15A;
+}
+
+section div {
+  flex: 1;
+}
+
+.wrapper__first {
+  background-color: #61B15A;
+}
+
+.wrapper__second {
+  background-color: #FFF76A;
+}
+
+.wrapper__three {
+  background-color: #FFCE89;
+}
+
+.first.is-hidden {
+  visibility: hidden;
+}
+
+.wrapper__second.is-transform {
+  order: -1;
+}
+
+.modal-hi {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  align-items: start;
+  background-color: rgba(41, 48, 56, 0.7);
+  font-size: 24px;
+}
+
+.modal-hi div {
+  position: relative;
+  margin: 0;
+  margin-top: 50px;
+  width: 50%;
+  min-width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.modal-hi button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  background-color: transparent;
+}
+
+.modal-hi button::after,
+.modal-hi button::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 2px;
+  background-color: #000000;
+  content: '';
+  margin: auto;
+  transform: rotate(45deg);
+}
+
+.modal-hi button::before {
+  transform: rotate(-45deg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media (max-width: 600px) {
+  section {
+    flex-direction: column;
+  }
+}
